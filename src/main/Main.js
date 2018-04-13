@@ -36,7 +36,7 @@ class Main extends React.Component {
       value: { min: 60, max: 120 }
     }
   }
-
+//generate api call
   generateUrl = params => {
     const {genres, year, rating, runtime, page } = params;
     const selectedGenre = genres.find( genre => genre.name === params.genre);
@@ -56,20 +56,20 @@ class Main extends React.Component {
 
     this.setState({ moviesUrl });
   }
-
+  // refreshes to pg 1, gens url
   onSearchButtonClick = () => {
     this.setState({page : 1});
     this.generateUrl(this.state);
   }
-
+  // sets genre in state from event
   onGenreChange = event => {
     this.setState({ genre: event.target.value });
   }
-
+  
   setGenres = genres => {
     this.setState({genres});
   }
-
+  // 
   onChange = data => {
     this.setState({
       [data.type]: {
@@ -93,6 +93,7 @@ class Main extends React.Component {
       this.setState({ page: nextPage })
     }
   }
+  //if state empty or no movies
   componentDidMount(){
     const savedState = this.getStateFromLocalStorage();
     if ( !savedState || (savedState && !savedState.movies.length)) {
