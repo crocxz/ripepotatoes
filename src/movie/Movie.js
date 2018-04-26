@@ -9,6 +9,7 @@ class Movie extends React.Component {
     movie: {}
   }
 
+  
 //preps url with movie id, fetches json movie data from api req, sets in state
   componentDidMount() {
     const { movieId } = this.props.match.params;
@@ -39,6 +40,7 @@ class Movie extends React.Component {
     const backgroundStyle = {
       backgroundImage: `url(${imgUrl})`
     };
+    
     //loading movie if loading, sets page up
     return (
       <div className="movie-page"> 

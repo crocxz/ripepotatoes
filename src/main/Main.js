@@ -1,7 +1,5 @@
-// Main.js
-
 import React from "react";
-import "./Main.css"
+import "./Main.css";
 import Navigation from "./navigation/Navigation";
 import Movies from "./movies/Movies";
 

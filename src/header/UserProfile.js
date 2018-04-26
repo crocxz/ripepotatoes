@@ -1,16 +1,16 @@
 import React from "react";
+import './UserProfile.css';
 
-const UserProfile = React.createClass({
-    render: function() {
+const UserProfile = () => {
       return (
         <div className="UserProfile">
           <div className="User">
             <div className="name">John Smith</div>
-            <div className="image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/profile/profile-512_1.jpg" alt="profile" /></div>
+            <div className="image"><img src="https://nerdist.com/wp-content/uploads/2017/08/RickAstley.png" alt="profile" /></div>
           </div>
         </div>
       );
-    }
-  });
+    
+  }
 
   export default UserProfile

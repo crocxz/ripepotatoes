@@ -9,6 +9,7 @@ const MovieListItem = ({ movie }) => {
   const { id, title, poster_path, release_date, vote_average } = movie;
   const imgUrl = `https://image.tmdb.org/t/p/w342/${poster_path}`;
   const year = release_date.substring(0, 4);
+  
   //render component with hyperlink image
   return (
     <li className="movie-item">
