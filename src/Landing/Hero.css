@@ -3,7 +3,8 @@
     width: 100%;
     position: relative;
     background-size: cover;
-    min-height: 800px;
+    min-height: 600px;
+    margin-bottom: 500px;
   }
   .Hero .content {
     position: relative;
@@ -32,6 +33,7 @@
   .Hero .content .button-wrapper .Button:first-child {
     margin-right: 10px;
   }
+  
   .Hero .overlay {
     /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #221f1f 0%, rgba(34, 31, 31, 0) 100%);

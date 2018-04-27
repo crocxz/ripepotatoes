@@ -27,7 +27,7 @@ class Home extends React.Component {
       return (
         <div>
         
-          <NextButton />
+      
           <TitleList title="Search Results" url={this.state.searchUrl} />
           <TitleList title="Top TV picks for Jack" url='discover/tv?sort_by=popularity.desc&page=1' />
           <TitleList title="Trending now" url='discover/movie?sort_by=popularity.desc&page=1' />

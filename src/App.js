@@ -11,16 +11,19 @@ import "./App.css";
 const App = () => {
   return (
     <BrowserRouter>
-      <div>
+      <div className="Page">
+        <div className="Landing">
         <Header />
         <Hero />
+        </div>
+        <div className="Body">
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/search/' component={Main} />
           <Route path="/movie/:movieId" component={Movie} />
           <Route component={NotFound} />
         </ Switch>
-        
+        </div>
       </div>
     </BrowserRouter>
   );

@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import './NextButton.css';
 
 const NextButton = () => (
-    <div className="next-button"> 
+    <div>
     <Link to={`/search/`}>
-     Next
+    <div className="next-button"> 
+     Advanced Search
+     </div>
     </Link>
     </div>
   )
