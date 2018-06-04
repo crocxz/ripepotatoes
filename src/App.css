@@ -34,21 +34,14 @@ body {
   line-height: 1;
 }
 
-.Page {
-  display: flex;
-  flex-direction: column;
-  padding: 0 0 0 px;
-}
+
 
 .Landing {
   order: 1;
   margin: 0 0 200px;
 }
 
-.Body {
-  order: 2;
- 
-}
+
 
 
 ol, ul {

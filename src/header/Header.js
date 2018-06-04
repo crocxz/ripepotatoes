@@ -33,6 +33,7 @@ class Header extends React.Component {
             <Menu />
             <div id="search" className="Search">
               <input onKeyUp={this.handleKeyUp} onChange={this.handleChange} type="search" placeholder="Search for a title..." value={this.state.searchTerm}/>
+            
             </div>
             <UserProfile />
           </header>

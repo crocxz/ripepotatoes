@@ -63,11 +63,11 @@ class Main extends React.Component {
   onGenreChange = event => {
     this.setState({ genre: event.target.value });
   }
-  
+  //retrieve genres into state
   setGenres = genres => {
     this.setState({genres});
   }
-  // 
+  // refresh state data to rerender
   onChange = data => {
     this.setState({
       [data.type]: {
@@ -76,7 +76,7 @@ class Main extends React.Component {
       }
     });
   };
-
+  //increase page num in state
   onPageIncrease = () => {
     const { page, total_pages } = this.state
     const nextPage = page + 1;
@@ -84,7 +84,7 @@ class Main extends React.Component {
       this.setState({ page: nextPage })
     }
   }
-  
+  // decrease page num in state
   onPageDecrease = () => {
     const nextPage = this.state.page - 1;
     if ( nextPage > 0 ) {
@@ -112,7 +112,7 @@ class Main extends React.Component {
     this.generateUrl(nextState);
   }
   }
-
+  //store retrieve movies in state
   storeMovies = data => {
     const movies = data.results.map( result => {
       const  { vote_count, id, genre_ids, poster_path, title, vote_average, release_date } = result;
@@ -120,14 +120,14 @@ class Main extends React.Component {
       });
     this.setState({ movies, total_pages: data.total_pages });
   }
-
+  // ajax request to fetch movies from api
   fetchMovies = (url) => {
     fetch(url)
       .then(response => response.json())
       .then(data => this.storeMovies(data))
       .catch(error => console.log(error));
   }
-
+  
   saveStateToLocalStorage = () => {
     localStorage.setItem("ripepotatoes.params", JSON.stringify(this.state));
   }
